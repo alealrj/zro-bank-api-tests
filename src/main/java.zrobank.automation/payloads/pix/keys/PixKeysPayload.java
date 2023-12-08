@@ -24,16 +24,13 @@ public class PixKeysPayload extends TokenManager {
     private static final String DELETE_PIX_ID = "/pix/keys/{id}";
 
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post/pixKeys.json";
-    private static final String RESPONSE_POST_PIX_KEYS_DISMISS = "src/test/resources/test_output/pix_keys/post/pixKeysDismiss.json";
 
     private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix_keys/get/pixKeys.json";
 
     public Response postPixKeys() {
-        Map<String, String> headers = new HashMap<>();
-        headers.put("nonce", FileOperations.random());
 
         Response response = given()
-                .headers(headers)
+                .headers("nonce", FileOperations.random())
                 .body(pixKeysRequestFactory.postCreateKey())
                 .post(POST_PIX_KEYS)
                 .then().log().all()
@@ -57,24 +54,17 @@ public class PixKeysPayload extends TokenManager {
                 .pathParam("id", id)
                 .headers("nonce", FileOperations.random())  // Defina os headers
                 .post(POST_PIX_KEYS_ID_DISMISS)
-                .then()
+                .then().log().all()
                 .extract().response();
-
-        // Salve a resposta em um arquivo
-        String responseBody = response.body().asString();
-        FileOperations.saveJsonToFile(RESPONSE_POST_PIX_KEYS_DISMISS, responseBody);
 
         return response;
     }
 
     public Response getPixKeys() {
-        Map<String, String> headers = new HashMap<>();
-        headers.put("nonce", FileOperations.random());
 
         // Faça a solicitação GET para obter chaves Pix
         Response response = given()
-                .headers(headers)
-                .log().all()
+                .headers("nonce", FileOperations.random())
                 .get(GET_PIX_KEYS)
                 .then()
                 .log().all()
@@ -83,6 +73,25 @@ public class PixKeysPayload extends TokenManager {
         // Salve a resposta em um arquivo
         String responseBody = response.body().asString();
         FileOperations.saveJsonToFile(RESPONSE_GET_PIX_KEYS, responseBody);
+
+        return response;
+    }
+
+    public Response deletePixKeyId() {
+
+        // Lê o JSON para obter o ID da chave que você deseja excluir
+        String content = FileOperations.readJsonFromFile(RESPONSE_GET_PIX_KEYS);
+        JsonPath jsonPath = new JsonPath(content);
+        String id = jsonPath.getString("data.data[0].id");
+
+        // Faça a solicitação DELETE para excluir a chave
+        Response response = given()
+                .pathParam("id", id)
+                .headers("nonce", FileOperations.random())
+                .delete(DELETE_PIX_ID)
+                .then()
+                .log().all()
+                .extract().response();
 
         return response;
     }
