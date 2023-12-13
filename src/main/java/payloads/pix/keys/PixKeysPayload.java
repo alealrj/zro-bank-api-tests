@@ -12,6 +12,7 @@ public class PixKeysPayload extends TokenManager {
 
     // Inicialização de serviços e utilidades
     private final PixKeysRequestFactory pixKeysRequestFactory = new PixKeysRequestFactory();
+    private final FileOperations fileOperations = new FileOperations();
 
     // Endpoints da API
     private static final String POST_PIX_KEYS = "/pix/keys";
@@ -37,9 +38,8 @@ public class PixKeysPayload extends TokenManager {
 
     public Response postDismiss() {
         // Leia o arquivo de resposta da criação de chaves Pix
-        String contentToken = FileOperations.readJsonFromFile(RESPONSE_POST_PIX_KEYS);
-        JsonPath jsonPathToken = new JsonPath(contentToken);
-        String id = jsonPathToken.getString("data.id");
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_KEYS);
+        String id = jsonPathKeys.getString("data.id");
 
         // Faça a solicitação POST para realizar o dismiss de chaves Pix
         Response response = given()
@@ -69,9 +69,8 @@ public class PixKeysPayload extends TokenManager {
     public Response deletePixKeyId() {
 
         // Lê o JSON para obter o ID da chave que você deseja excluir
-        String content = FileOperations.readJsonFromFile(RESPONSE_GET_PIX_KEYS);
-        JsonPath jsonPath = new JsonPath(content);
-        String id = jsonPath.getString("data.data[0].id");
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_GET_PIX_KEYS);
+        String id = jsonPathKeys.getString("data.data[0].id");
 
         // Faça a solicitação DELETE para excluir a chave
         Response response = given()

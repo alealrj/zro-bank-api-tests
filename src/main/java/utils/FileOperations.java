@@ -1,5 +1,6 @@
 package utils;
 
+import io.restassured.path.json.JsonPath;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -15,15 +16,26 @@ public class FileOperations {
             System.err.println("Erro ao salvar a resposta em arquivo: " + e.getMessage());
         }
     }
+//
+//    public static String readJsonFromFile(String filePath) {
+//        try {
+//            return FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+//        } catch (IOException e) {
+//            System.err.println("Erro ao ler o arquivo JSON: " + e.getMessage());
+//            return null;
+//        }
+//    }
 
-    public static String readJsonFromFile(String filePath) {
+    public JsonPath readJsonFileAsJsonPath(String filePath) {
         try {
-            return FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+            String content = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+            return new JsonPath(content);
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo JSON: " + e.getMessage());
             return null;
         }
     }
+
     public static String random() {
         String id = UUID.randomUUID().toString();
         return id;
