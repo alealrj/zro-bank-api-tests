@@ -17,11 +17,13 @@ public class PixKeysPayloads extends TokenManager {
     // Endpoints da API
     private static final String POST_PIX_KEYS = "/pix/keys";
     private static final String GET_PIX_KEYS = "/v2/pix/keys";
+    private static final String GET_PIX_KEYS_ID = "/pix/keys/{id}";
     private static final String POST_PIX_KEYS_ID_DISMISS = "/pix/keys/{id}/dismiss";
     private static final String DELETE_PIX_ID = "/pix/keys/{id}";
 
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
     private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix_keys/get_v2_pix_keys.json";
+
 
     public Response postPixKeys() {
 
@@ -66,11 +68,30 @@ public class PixKeysPayloads extends TokenManager {
         return response;
     }
 
+
+    public Response getPixKeysId(){
+
+        // Lê o JSON para obter o ID da chave que você deseja excluir
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_KEYS);
+        String id = jsonPathKeys.getString("data.id");
+
+        // Faça a solicitação GET para obter chaves Pix
+        Response response = given()
+                .pathParam("id", id)
+                .headers("nonce", FileOperations.random())
+                .log().all()
+                .get(GET_PIX_KEYS_ID)
+                .then().log().all()
+                .extract().response();
+
+        return response;
+    }
+
     public Response deletePixKeyId() {
 
         // Lê o JSON para obter o ID da chave que você deseja excluir
-        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_GET_PIX_KEYS);
-        String id = jsonPathKeys.getString("data.data[0].id");
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_KEYS);
+        String id = jsonPathKeys.getString("data.id");
 
         // Faça a solicitação DELETE para excluir a chave
         Response response = given()

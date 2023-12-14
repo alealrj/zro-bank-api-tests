@@ -17,6 +17,8 @@ public class PixKeysRunnerTest {
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
     private static final String RESPONSE_POST_PIX_DISMISS = "src/test/resources/test_output/pix_keys/post_pix_keys_id_dismiss.json";
     private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix_keys/get_v2_pix_keys.json";
+    private static final String RESPONSE_GET_PIX_KEYS_ID = "src/test/resources/test_output/pix_keys/get_v2_pix_keys_id.json";
+
     private static final String RESPONSE_DELETE_PIX_KEYS = "src/test/resources/test_output/pix_keys/del_pix_keys_id.json";
     private static final String RESPONSE_DELETE_PIX_KEYS_DISMISS = "src/test/resources/test_output/pix_keys/del_pix_keys_id_dismiss.json";
 
@@ -53,6 +55,14 @@ public class PixKeysRunnerTest {
 
         String responseBody = response.body().asString();
         FileOperations.saveJsonToFile(RESPONSE_POST_PIX_DISMISS, responseBody);
+    }
+    @Test(description = "Consulta de chaves Pix por ID", priority = 3)
+    public void consultaChavesPixId() {
+        Response response = pixKeysPayloads.getPixKeysId();
+        response.then().statusCode(200);
+
+        String responseBody = response.body().asString();
+        FileOperations.saveJsonToFile(RESPONSE_GET_PIX_KEYS_ID, responseBody);
     }
 
     @Test(description = "Consulta de chaves Pix", priority = 3)
