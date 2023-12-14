@@ -8,7 +8,7 @@ import utils.TokenManager;
 
 import static io.restassured.RestAssured.given;
 
-public class PixKeysPayload extends TokenManager {
+public class PixKeysPayloads extends TokenManager {
 
     // Inicialização de serviços e utilidades
     private final PixKeysRequestFactory pixKeysRequestFactory = new PixKeysRequestFactory();

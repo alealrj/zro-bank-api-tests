@@ -2,7 +2,7 @@ package pix;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import payloads.pix.keys.PixKeysPayload;
+import payloads.pix.keys.PixKeysPayloads;
 import utils.FileOperations;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.nullValue;
 
 public class PixKeysRunnerTest {
 
-    final PixKeysPayload pixKeysPayload = new PixKeysPayload();
+    final PixKeysPayloads pixKeysPayloads = new PixKeysPayloads();
 
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
     private static final String RESPONSE_POST_PIX_DISMISS = "src/test/resources/test_output/pix_keys/post_pix_keys_id_dismiss.json";
@@ -22,7 +22,7 @@ public class PixKeysRunnerTest {
 
     @Test(description = "Cadastro de chaves", priority = 1)
     public void cadastrarChavesPixEvpTest() {
-        Response response = pixKeysPayload.postPixKeys();
+        Response response = pixKeysPayloads.postPixKeys();
         response.then().statusCode(201);
 
         response.then().body("success", isA(Boolean.class));
@@ -40,7 +40,7 @@ public class PixKeysRunnerTest {
 
     @Test(description = "Dismiss", priority = 2)
     public void dismissCreateKey() {
-        Response response = pixKeysPayload.postDismiss();
+        Response response = pixKeysPayloads.postDismiss();
         response.then().statusCode(200);
 
         response.then().body("success", isA(Boolean.class));
@@ -57,7 +57,7 @@ public class PixKeysRunnerTest {
 
     @Test(description = "Consulta de chaves Pix", priority = 3)
     public void consultaChavesPix() {
-        Response response = pixKeysPayload.getPixKeys();
+        Response response = pixKeysPayloads.getPixKeys();
         response.then().statusCode(200);
 
         response.then().body("success", isA(Boolean.class));
@@ -75,7 +75,7 @@ public class PixKeysRunnerTest {
 
     @Test(description = "Deletar chaves Pix", priority = 4)
     public void deletarChavesPixTest() {
-        Response response = pixKeysPayload.deletePixKeyId();
+        Response response = pixKeysPayloads.deletePixKeyId();
         response.then().statusCode(200);
 
         response.then().body("success", equalTo(true));
@@ -94,7 +94,7 @@ public class PixKeysRunnerTest {
 
     @Test(description = "Dismiss", priority = 5)
     public void dismissDeleteKey() {
-        Response response = pixKeysPayload.postDismiss();
+        Response response = pixKeysPayloads.postDismiss();
         response.then().statusCode(200);
 
         response.then().body("success", isA(Boolean.class));

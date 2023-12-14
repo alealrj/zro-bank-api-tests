@@ -6,13 +6,12 @@ import io.restassured.response.Response;
 import utils.FileOperations;
 import utils.TokenManager;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class PixPaymentsPayload extends TokenManager {
+public class PixPaymentsPayloads extends TokenManager {
 
     private final PixPaymentsKeysRequestFactory pixPaymentsKeysRequestFactory = new PixPaymentsKeysRequestFactory();
     private final PixPaymentsQrCodeRequestFactory pixPaymentsQrCodeRequestFactory = new PixPaymentsQrCodeRequestFactory();
