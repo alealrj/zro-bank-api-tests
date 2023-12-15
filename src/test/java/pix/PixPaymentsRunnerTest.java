@@ -28,7 +28,6 @@ public class PixPaymentsRunnerTest {
 
         String responseBody = response.body().asString();
         FileOperations.saveJsonToFile(RESPONSE_DECODE_PIX_KEY, responseBody);
-
     }
 
     @Test(description = "Decode de QrCode Estático", priority = 2)

@@ -75,7 +75,20 @@ public class PixDepositsPayloads extends TokenManager {
         return response;
     }
 
-    public Response getPixDepositsQrCodes(String id) {
+    public Response getPixDepositsQrCodes() {
+
+        Response response = given()
+                .headers("nonce", FileOperations.random())
+                .log().all()
+                .get(GET_PIX_DEPOSITS_QRCODES)
+                .then()
+                .log().all()
+                .extract().response();
+
+        return response;
+    }
+
+    public Response getPixDepositsQrCodesId(String id) {
 
         Response response = given()
                 .pathParam("id", id)

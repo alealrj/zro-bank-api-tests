@@ -61,41 +61,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.PixDepositsRunnerTest.getPixDepositsQrCodes.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixDepositsRunnerTest.postPixDepositsQrCodes.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.cadastrarChavesPixEvpTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.consultaChavesPix.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.deletarChavesPixTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.dismissCreateKey.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.dismissDeleteKey.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixKeysRunnerTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixPaymentsRunnerTest.decodePixKey.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixPaymentsRunnerTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PixPaymentsRunnerTest.paymentPixKeys.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/60003723/Documents/projetos-automacoes/zro-bank-api-tests&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.pix in zro-bank-api-tests.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.ApiUserTestsRunner.executor": "Run",
+    "TestNG.PixDepositsRunnerTest.executor": "Run",
+    "TestNG.PixDepositsRunnerTest.getPixDepositsQrCodes.executor": "Run",
+    "TestNG.PixDepositsRunnerTest.getPixDepositsQrCodesId.executor": "Run",
+    "TestNG.PixDepositsRunnerTest.postPixDepositsQrCodes.executor": "Run",
+    "TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamic.executor": "Run",
+    "TestNG.PixKeysRunnerTest.cadastrarChavesPixEvpTest.executor": "Run",
+    "TestNG.PixKeysRunnerTest.consultaChavesPix.executor": "Run",
+    "TestNG.PixKeysRunnerTest.deletarChavesPixTest.executor": "Run",
+    "TestNG.PixKeysRunnerTest.dismissCreateKey.executor": "Run",
+    "TestNG.PixKeysRunnerTest.dismissDeleteKey.executor": "Run",
+    "TestNG.PixKeysRunnerTest.executor": "Run",
+    "TestNG.PixPaymentsRunnerTest.decodePixKey.executor": "Run",
+    "TestNG.PixPaymentsRunnerTest.executor": "Run",
+    "TestNG.PixPaymentsRunnerTest.paymentPixKeys.executor": "Run",
+    "TestNG.pix.PixDepositsRunnerTest and 3 more.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/60003723/Documents/projetos-automacoes/zro-bank-api-tests",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/schemas/pix" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="model.request.pix.payments" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PixKeysRunnerTest">
+  <component name="RunManager" selected="TestNG.PixDepositsRunnerTest.getPixDepositsQrCodesId">
+    <configuration name="pix in zro-bank-api-tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zro-bank-api-tests" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/pix" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -128,52 +145,10 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="PixDepositsRunnerTest.getPixDepositsQrCodes" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiUserTestsRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pix.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
-      <option name="METHOD_NAME" value="getPixDepositsQrCodes" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PixDepositsRunnerTest.postPixDepositsQrCodes" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="zro-bank-api-tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pix.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
-      <option name="METHOD_NAME" value="postPixDepositsQrCodes" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PixKeysRunnerTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="zro-bank-api-tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pix.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixKeysRunnerTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApiUserTestsRunner" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -181,7 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixKeysRunnerTest.cadastrarChavesPixEvpTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDepositsRunnerTest.getPixDepositsQrCodesId" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -190,8 +165,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixKeysRunnerTest" />
-      <option name="METHOD_NAME" value="cadastrarChavesPixEvpTest" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
+      <option name="METHOD_NAME" value="getPixDepositsQrCodesId" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -199,7 +174,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixKeysRunnerTest.dismissCreateKey" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDepositsRunnerTest.postPixDepositsQrCodesDynamic" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -208,22 +183,37 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixKeysRunnerTest" />
-      <option name="METHOD_NAME" value="dismissCreateKey" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
+      <option name="METHOD_NAME" value="postPixDepositsQrCodesDynamic" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pix.PixDepositsRunnerTest and 3 more" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="zro-bank-api-tests" />
+      <option name="TEST_OBJECT" value="PATTERN" />
+      <properties />
+      <listeners />
+      <patterns>
+        <pattern testClass="pix.PixDepositsRunnerTest" />
+        <pattern testClass="pix.PixDevolutionsRunnerTest" />
+        <pattern testClass="pix.PixKeysRunnerTest" />
+        <pattern testClass="pix.PixPaymentsRunnerTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PixKeysRunnerTest" />
-        <item itemvalue="TestNG.PixDepositsRunnerTest.postPixDepositsQrCodes" />
-        <item itemvalue="TestNG.PixDepositsRunnerTest.getPixDepositsQrCodes" />
-        <item itemvalue="TestNG.PixKeysRunnerTest.dismissCreateKey" />
-        <item itemvalue="TestNG.PixKeysRunnerTest.cadastrarChavesPixEvpTest" />
+        <item itemvalue="TestNG.PixDepositsRunnerTest.getPixDepositsQrCodesId" />
+        <item itemvalue="TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamic" />
+        <item itemvalue="TestNG.pix.PixDepositsRunnerTest and 3 more" />
+        <item itemvalue="JUnit.pix in zro-bank-api-tests" />
+        <item itemvalue="TestNG.ApiUserTestsRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +261,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/utils/BaseUrl.java</url>
           <line>9</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pix/PixDepositsRunnerTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pix/PixDepositsRunnerTest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

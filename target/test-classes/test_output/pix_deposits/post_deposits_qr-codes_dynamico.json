@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "data": {
+    "id": "a2550d2f-1b78-4020-a8d4-a5cb8e4b636d",
+    "key_id": "d3e25b95-6bc4-4ec0-87fc-1219159a138c",
+    "summary": "party-payment",
+    "description": "The party payment.",
+    "state": "PENDING",
+    "created_at": "2023-12-15T20:07:51.772Z",
+    "expiration_date": "2023-12-19T02:59:59.999Z"
+  },
+  "error": null
+}
