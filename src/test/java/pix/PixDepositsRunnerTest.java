@@ -1,5 +1,6 @@
 package pix;
 
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.hamcrest.SelfDescribing;
 import org.testng.annotations.Test;
@@ -12,12 +13,14 @@ import static org.hamcrest.Matchers.nullValue;
 public class PixDepositsRunnerTest {
 
     final PixDepositsPayloads pixDepositsPayloads = new PixDepositsPayloads();
+    final FileOperations fileOperations = new FileOperations();
 
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes.json";
-
+    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/get_deposits_qr-codes.json";
 
     @Test(description = "Gerar QR Code Estático", priority = 1)
     public void postPixDepositsQrCodes() {
+
         String key_id = "d3e25b95-6bc4-4ec0-87fc-1219159a138c";
         Number value = 15000;
         String summary = "";
@@ -42,9 +45,16 @@ public class PixDepositsRunnerTest {
         FileOperations.saveJsonToFile(RESPONSE_POST_PIX_DEPOSITS_QRCODES, responseBody);
     }
 
-    @Test(description = "Buscar Status do QR Code", priority = 1)
+    @Test(description = "Buscar QR Code Estático", priority = 1)
     public void getPixDepositsQrCodes() {
 
-        pixDepositsPayloads.getPixDepositsQrCodes();
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_DEPOSITS_QRCODES);
+        String id = jsonPathKeys.getString("data.id");
+
+        Response response = pixDepositsPayloads.getPixDepositsQrCodes(id);
+        response.then().statusCode(200);
+
+        String responseBody = response.body().asString();
+        FileOperations.saveJsonToFile(RESPONSE_GET_PIX_DEPOSITS_QRCODES, responseBody);
     }
 }

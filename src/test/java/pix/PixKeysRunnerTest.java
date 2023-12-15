@@ -23,7 +23,7 @@ public class PixKeysRunnerTest {
     private static final String RESPONSE_DELETE_PIX_KEYS_DISMISS = "src/test/resources/test_output/pix_keys/del_pix_keys_id_dismiss.json";
 
     @Test(description = "Cadastro de chaves", priority = 1)
-    public void cadastrarChavesPixEvpTest() {
+    public void postPixKey() {
         Response response = pixKeysPayloads.postPixKeys();
         response.then().statusCode(201);
 
@@ -41,7 +41,7 @@ public class PixKeysRunnerTest {
     }
 
     @Test(description = "Dismiss", priority = 2)
-    public void dismissCreateKey() {
+    public void dismissPostPixKeys() {
         Response response = pixKeysPayloads.postDismiss();
         response.then().statusCode(200);
 
@@ -57,7 +57,7 @@ public class PixKeysRunnerTest {
         FileOperations.saveJsonToFile(RESPONSE_POST_PIX_DISMISS, responseBody);
     }
     @Test(description = "Consulta de chaves Pix por ID", priority = 3)
-    public void consultaChavesPixId() {
+    public void getPixKeyId() {
         Response response = pixKeysPayloads.getPixKeysId();
         response.then().statusCode(200);
 
@@ -66,7 +66,7 @@ public class PixKeysRunnerTest {
     }
 
     @Test(description = "Consulta de chaves Pix", priority = 3)
-    public void consultaChavesPix() {
+    public void getPixKey() {
         Response response = pixKeysPayloads.getPixKeys();
         response.then().statusCode(200);
 
@@ -84,7 +84,7 @@ public class PixKeysRunnerTest {
     }
 
     @Test(description = "Deletar chaves Pix", priority = 4)
-    public void deletarChavesPixTest() {
+    public void delPixKeyId() {
         Response response = pixKeysPayloads.deletePixKeyId();
         response.then().statusCode(200);
 
@@ -103,7 +103,7 @@ public class PixKeysRunnerTest {
 
 
     @Test(description = "Dismiss", priority = 5)
-    public void dismissDeleteKey() {
+    public void postDismissDelPixKeyId() {
         Response response = pixKeysPayloads.postDismiss();
         response.then().statusCode(200);
 

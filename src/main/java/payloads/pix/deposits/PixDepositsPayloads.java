@@ -41,10 +41,41 @@ public class PixDepositsPayloads extends TokenManager {
         return response;
     }
 
-    public Response getPixDepositsQrCodes (){
+    public Response postDepositsQrCodesDynamic(String key, Number document_value, String expiration_date, String summary, String description,
+                                               String payer_request) {
 
-        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_KEYS);
-        String id = jsonPathKeys.getString("data.id");
+        Response response = given()
+                .headers("nonce", FileOperations.random())
+                .body(pixDepositsQrCodesRequestFactory.postPixDepositsQrCodeDynamicInstantBillingRequest(key, document_value, expiration_date, summary,
+                        description, payer_request))
+                .log().all()
+                .post(POST_PIX_DEPOSITS_QRCODES_DYNAMIC_INSTANT_BILLING)
+                .then()
+                .log().all()
+                .extract().response();
+
+        return response;
+    }
+
+    public Response postDepositsQrCodesDynamicDueDate(String key, Number document_value, String due_date, String expiration_date, String summary, String description,
+                                                      String payer_city, String payer_person_type, String payer_document, String payer_name, String payer_email, String payer_phone,
+                                                      String payer_address, String payer_request) {
+
+        Response response = given()
+                .headers("nonce", FileOperations.random())
+                .body(pixDepositsQrCodesRequestFactory.postPixDepositsQrCodeDynamicDueDateRequest(key, document_value, due_date, expiration_date, summary, description,
+                        payer_city, payer_person_type, payer_document, payer_name, payer_email, payer_phone,
+                        payer_address, payer_request))
+                .log().all()
+                .post(POST_PIX_DEPOSITS_QRCODES_DYNAMIC_DUE_DATE)
+                .then()
+                .log().all()
+                .extract().response();
+
+        return response;
+    }
+
+    public Response getPixDepositsQrCodes(String id) {
 
         Response response = given()
                 .pathParam("id", id)
@@ -57,4 +88,5 @@ public class PixDepositsPayloads extends TokenManager {
 
         return response;
     }
+
 }
