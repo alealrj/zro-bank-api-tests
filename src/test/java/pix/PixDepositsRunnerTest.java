@@ -23,7 +23,6 @@ public class PixDepositsRunnerTest {
     final String POST_PIX_DEPOSITS_QRCODES_DYNAMIC = "schemas/pix/deposits/postPixDepositsQrCodesDynamico.json";
     final String GET_PIX_DEPOSITS_QRCODES_DYNAMIC = "schemas/pix/deposits/getPixDepositsQrCodesDynamicoId.json";
 
-
     //Salvar o json
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes.json";
     private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_ID = "src/test/resources/test_output/pix_deposits/get_deposits_qr-codes_id.json";
