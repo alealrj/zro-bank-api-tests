@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "key_id": {
+          "type": "string"
+        },
+        "emv": {
+          "type": "string"
+        },
+        "txid": {
+          "type": "string"
+        },
+        "expiration_date": {
+          "type": "string"
+        },
+        "value": {
+          "type": ["integer", "number"]
+        },
+        "description": {
+          "type": ["string", "null"]
+        },
+        "state": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "key_id",
+        "emv",
+        "txid",
+        "expiration_date",
+        "value",
+        "description",
+        "state",
+        "created_at"
+      ]
+    },
+    "error": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "success",
+    "data",
+    "error"
+  ]
+}

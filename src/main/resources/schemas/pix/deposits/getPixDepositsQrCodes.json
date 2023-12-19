@@ -39,7 +39,7 @@
                   "type": "string"
                 },
                 "value": {
-                  "type": "null"
+                  "type": ["null", "integer", "number"]
                 },
                 "summary": {
                   "type": "string"

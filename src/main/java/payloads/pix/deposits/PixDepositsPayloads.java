@@ -102,4 +102,17 @@ public class PixDepositsPayloads extends TokenManager {
         return response;
     }
 
+    public Response getPixDepositsQrCodesDynamicId(String id) {
+
+        Response response = given()
+                .pathParam("id", id)
+                .headers("nonce", FileOperations.random())
+                .log().all()
+                .get(GET_PIX_DEPOSITS_QRCODES_DYNAMIC_ID)
+                .then()
+                .log().all()
+                .extract().response();
+
+        return response;
+    }
 }
