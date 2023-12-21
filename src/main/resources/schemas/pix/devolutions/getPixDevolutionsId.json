@@ -21,7 +21,7 @@
           "type": "string"
         },
         "end_to_end_id": {
-          "type": "null"
+          "type": "string"
         },
         "txid": {
           "type": "null"
@@ -30,7 +30,7 @@
           "type": "integer"
         },
         "owner_name": {
-          "type": "string"
+          "type": "null"
         },
         "owner_person_type": {
           "type": "string"
