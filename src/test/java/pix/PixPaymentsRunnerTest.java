@@ -32,7 +32,7 @@ public class PixPaymentsRunnerTest {
 
     @Test(description = "Decode de QrCode Estático", priority = 2)
     public void decodePixQrCodeStatic() {
-        String qrCode = "00020126820014br.gov.bcb.pix01364004901d-bd85-4769-8e52-cb4c42c506dc0220Jornada pagador 93835204000053039865406829.825802BR5903Pix6008BRASILIA62290525e33339b8d74d4b319938b68276304F307";
+        String qrCode = "00020126830014br.gov.bcb.pix01364004901d-bd85-4769-8e52-cb4c42c506dc0221Jornada pagador 330955204000053039865406105.905802BR5903Pix6008BRASILIA62290525eb6854c75c9841f7b9b174150630467A5";
 
         Response response = pixPaymentsPayloads.getPixQrCodeDecode(qrCode);
         response.then().statusCode(200);
@@ -43,7 +43,7 @@ public class PixPaymentsRunnerTest {
 
     @Test(description = "Decode de QrCode Dinâmico", priority = 3)
     public void decodePixQrCodeDynamic() {
-        String qrCode = "00020126940014br.gov.bcb.pix2572qr-h.sandbox.pix.bcb.gov.br/rest/api/v2/384a6c2756b44704a6e29f8046774ab25204000053039865802BR5903Pix6008BRASILIA62070503***63048EF8";
+        String qrCode = "00020126940014br.gov.bcb.pix2572qr-h.sandbox.pix.bcb.gov.br/rest/api/v1/818e47c6ca3f47869bf76df985d1970f5204000053039865802BR5903Pix6008BRASILIA62070503***6304E95F";
 
         Response response = pixPaymentsPayloads.getPixQrCodeDecode(qrCode);
         response.then().statusCode(200);
@@ -54,7 +54,7 @@ public class PixPaymentsRunnerTest {
 
     @Test(description = "Decode de QrCode Dinâmico com Juros e Multa", priority = 4)
     public void decodePixQrCodeDynamicDueDate() {
-        String qrCodeWithDueDate = "00020126940014br.gov.bcb.pix2572qr-h.sandbox.pix.bcb.gov.br/rest/api/v2/384a6c2756b44704a6e29f8046774ab25204000053039865802BR5903Pix6008BRASILIA62070503***63048EF8";
+        String qrCodeWithDueDate = "00020126990014br.gov.bcb.pix2577qr-h.sandbox.pix.bcb.gov.br/rest/api/v2/cobv/74aee29021db46e4a624d393ab1de78b5204000053039865802BR5903Pix6008BRASILIA62070503***6304E51A";
 
         Response response = pixPaymentsPayloads.getPixQrCodeDecode(qrCodeWithDueDate);
         response.then().statusCode(200);
