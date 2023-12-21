@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ffbe40f-b4cf-46ca-b74f-d0fb94031543" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schemas/pix/devolutions/getPixDevolutions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schemas/pix/devolutions/getPixDevolutionsReceived.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schemas/pix/devolutions/getPixDevolutionsReceivedId.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_deposits/get_deposits_qr-codes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_deposits/get_deposits_qr-codes_dynamic_id.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_deposits/get_deposits_qr-codes_id.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_deposits/post_deposits_qr-codes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_deposits/post_deposits_qr-codes_dynamico.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payloads/pix/devolutions/PixDevolutionsPayloads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payloads/pix/devolutions/PixDevolutionsPayloads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pix/PixDevolutionsRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pix/PixDevolutionsRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payloads/pix/devolutions/PixDevolutionsPayloads.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/payloads/pix/devolutions/PixDevolutionsPayloads.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pix/PixDepositsRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pix/PixDepositsRunnerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pix/PixDevolutionsRunnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pix/PixDevolutionsRunnerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/del_pix_keys_id.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/del_pix_keys_id_dismiss.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/get_v2_pix_keys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/get_v2_pix_keys_id.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/post_pix_keys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test_output/pix_keys/post_pix_keys_id_dismiss.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,24 +37,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "author": "EnoqueQa"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;EnoqueQa&quot;
     },
     {
-      "state": "OPEN",
-      "assignee": "EnoqueQa",
-      "author": "EnoqueQa"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;EnoqueQa&quot;,
+      &quot;author&quot;: &quot;EnoqueQa&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "EnoqueQa",
-    "author": "EnoqueQa"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EnoqueQa&quot;,
+    &quot;author&quot;: &quot;EnoqueQa&quot;
   }
-}]]></component>
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -55,6 +68,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -83,6 +99,14 @@
     "TestNG.PixDepositsRunnerTest.postPixDepositsQrCodes.executor": "Run",
     "TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamic.executor": "Run",
     "TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamicDueDate.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getPixDevolutions (1).executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getPixDevolutions.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getPixDevolutionsId.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getPixDevolutionsReceived.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getPixDevolutionsReceivedId.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.getWarningPixDevolutionId.executor": "Run",
+    "TestNG.PixDevolutionsRunnerTest.pixDevolutions.executor": "Run",
     "TestNG.PixKeysRunnerTest.cadastrarChavesPixEvpTest.executor": "Run",
     "TestNG.PixKeysRunnerTest.consultaChavesPix.executor": "Run",
     "TestNG.PixKeysRunnerTest.deletarChavesPixTest.executor": "Run",
@@ -93,16 +117,18 @@
     "TestNG.PixPaymentsRunnerTest.executor": "Run",
     "TestNG.PixPaymentsRunnerTest.paymentPixKeys.executor": "Run",
     "TestNG.pix.PixDepositsRunnerTest and 3 more.executor": "Run",
+    "git-widget-placeholder": "pix-devolutions-v3",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/60003723/Documents/projetos-automacoes/zro-bank-api-tests",
+    "last_opened_file_path": "/home/efln/zro-bank-api-tests/src/main/resources/schemas/pix/devolutions",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/schemas/pix/devolutions" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -112,7 +138,7 @@
       <recent name="model.request.pix.payments" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PixDepositsRunnerTest">
+  <component name="RunManager" selected="TestNG.PixDevolutionsRunnerTest.getPixDevolutionsId">
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -145,7 +171,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="PixDepositsRunnerTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDevolutionsRunnerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -154,7 +180,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDevolutionsRunnerTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -162,7 +188,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixDepositsRunnerTest.getPixDepositsQrCodesId" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDevolutionsRunnerTest.getPixDevolutions" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +197,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
-      <option name="METHOD_NAME" value="getPixDepositsQrCodesId" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDevolutionsRunnerTest" />
+      <option name="METHOD_NAME" value="getPixDevolutions" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -180,7 +206,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixDepositsRunnerTest.postPixDepositsQrCodesDynamic" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDevolutionsRunnerTest.getPixDevolutionsId" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -189,8 +215,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
-      <option name="METHOD_NAME" value="postPixDepositsQrCodesDynamic" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDevolutionsRunnerTest" />
+      <option name="METHOD_NAME" value="getPixDevolutionsId" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -198,7 +224,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixDepositsRunnerTest.postPixDepositsQrCodesDynamicDueDate" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDevolutionsRunnerTest.getPixDevolutionsReceivedId" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -207,8 +233,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixDepositsRunnerTest" />
-      <option name="METHOD_NAME" value="postPixDepositsQrCodesDynamicDueDate" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDevolutionsRunnerTest" />
+      <option name="METHOD_NAME" value="getPixDevolutionsReceivedId" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -216,7 +242,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PixKeysRunnerTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PixDevolutionsRunnerTest.getWarningPixDevolutionId" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="zro-bank-api-tests" />
       <extension name="coverage">
         <pattern>
@@ -225,8 +251,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pix" />
-      <option name="MAIN_CLASS_NAME" value="pix.PixKeysRunnerTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="pix.PixDevolutionsRunnerTest" />
+      <option name="METHOD_NAME" value="getWarningPixDevolutionId" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -235,18 +262,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PixDepositsRunnerTest" />
-        <item itemvalue="TestNG.PixKeysRunnerTest" />
-        <item itemvalue="TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamicDueDate" />
-        <item itemvalue="TestNG.PixDepositsRunnerTest.getPixDepositsQrCodesId" />
-        <item itemvalue="TestNG.PixDepositsRunnerTest.postPixDepositsQrCodesDynamic" />
+        <item itemvalue="TestNG.PixDevolutionsRunnerTest.getPixDevolutionsId" />
+        <item itemvalue="TestNG.PixDevolutionsRunnerTest.getPixDevolutions" />
+        <item itemvalue="TestNG.PixDevolutionsRunnerTest" />
+        <item itemvalue="TestNG.PixDevolutionsRunnerTest.getWarningPixDevolutionId" />
+        <item itemvalue="TestNG.PixDevolutionsRunnerTest.getPixDevolutionsReceivedId" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.21-corretto-11.0.21-8336523bb0d9-641c9356" />
+        <option value="jdk-11.0.21-corretto-11.0.21-8336523bb0d9-3a399477" />
       </set>
     </attachedChunks>
   </component>
@@ -290,12 +317,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pix/PixDepositsRunnerTest.java</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pix/PixDepositsRunnerTest.java</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

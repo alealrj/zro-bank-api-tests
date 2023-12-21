@@ -38,10 +38,7 @@ public class PixDevolutionsPayloads extends TokenManager {
         return response;
     }
 
-    public Response getPixDevolutionId(){
-
-        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_DEVOLUTIONS);
-        String id = jsonPathKeys.getString("data.id");
+    public Response getPixDevolutionsId(String id){
 
         //Faça a solicitação GET para obter Pix Devolutions by ID
         Response response = given()
@@ -64,7 +61,7 @@ public class PixDevolutionsPayloads extends TokenManager {
 
         //Faça a solicitação GET para obter Pix Devolutions
         Response response = given()
-                .pathParams(page, size, order, sort, states)
+                .params("page", page, "size", size, "order", order, "sort", sort, "states", states)
                 .headers("nonce", FileOperations.random())
                 .log().all()
                 .get(GET_PIX_DEVOLUTIONS)
@@ -85,14 +82,11 @@ public class PixDevolutionsPayloads extends TokenManager {
 
         return response;
     }
-    public Response getPixDevolutionsReceivedId(){
-
-        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_PIX_DEVOLUTIONS);
-        String id = jsonPathKeys.getString("data.id");
+    public Response getPixDevolutionsReceivedId(String id){
 
         //Faça a solicitação GET para obter Pix Devolutions
         Response response = given()
-                .param("id", id)
+                .pathParam("id", id)
                 .headers("nonce", FileOperations.random())
                 .log().all()
                 .get(GET_PIX_DEVOLUTIONS_RECEIVED_ID)
@@ -113,10 +107,7 @@ public class PixDevolutionsPayloads extends TokenManager {
 
         return response;
     }
-    public Response getWarningPixDevolutionId(){
-
-        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_POST_V2_WARNING_PIX_DEVOLUTIONS);
-        String id = jsonPathKeys.getString("data.id");
+    public Response getWarningPixDevolutionId(String id){
 
         //Faça a solicitação GET para obter Warning Pix Devolutions by ID
         Response response = given()
