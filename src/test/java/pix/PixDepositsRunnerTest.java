@@ -36,7 +36,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QR Code Estático", priority = 1)
     public void postPixDepositsQrCodes() {
 
-        String key_id = "d3e25b95-6bc4-4ec0-87fc-1219159a138c";
+        String key_id = "ef8f3a2f-2541-47eb-9893-f4f2e4f5fc0e";
         Number value = 15000;
         String summary = "";
         String description = "";
@@ -78,7 +78,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico", priority = 3)
     public void postPixDepositsQrCodesDynamic() {
 
-        String key = "b57e042f-37e3-4f82-9a5d-3384781e7c91";
+        String key = "1646c1c6-576c-4e66-aab0-a28f5bba5d91";
         Number document_value = 2300;
         String expiration_date = FileOperations.getFormattedExpirationDate();
         String summary = "party-payment";
@@ -114,7 +114,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico Due Date (Juros e Multa)", priority = 5)
     public void postPixDepositsQrCodesDynamicDueDate() {
 
-        String key = "b57e042f-37e3-4f82-9a5d-3384781e7c91";
+        String key = "1646c1c6-576c-4e66-aab0-a28f5bba5d91";
         Number document_value = 2300;
         String due_date = "2023-12-11";
         String expiration_date = "2023-12-11";
