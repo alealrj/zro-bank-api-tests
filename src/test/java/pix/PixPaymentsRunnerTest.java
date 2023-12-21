@@ -6,17 +6,21 @@ import org.testng.annotations.Test;
 import payloads.pix.payments.PixPaymentsPayloads;
 import utils.FileOperations;
 
+import static org.testng.Assert.assertEquals;
+
 public class PixPaymentsRunnerTest {
 
     private final PixPaymentsPayloads pixPaymentsPayloads = new PixPaymentsPayloads();
     private final FileOperations fileOperations = new FileOperations();
 
-
     private static final String RESPONSE_DECODE_PIX_KEY = "src/test/resources/test_output/pix_payments/decode/decodePixKeys.json";
     private static final String RESPONSE_DECODE_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeStatic.json";
     private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeDynamic.json";
     private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeDynamicDueDate.json";
-    private static final String RESPONSE_PAYMENTS_PIX_KEY = "src/test/resources/test_output/pix_payments/payments/decodePixKeys.json";
+    private static final String RESPONSE_PAYMENTS_PIX_KEY = "src/test/resources/test_output/pix_payments/payments/paymentsPixKeys.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeEstatico.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeDinamico.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeDinamicoDueDate.json";
 
     @Test(description = "Decode de chave Pix", priority = 1)
     public void decodePixKey() {
@@ -32,7 +36,7 @@ public class PixPaymentsRunnerTest {
 
     @Test(description = "Decode de QrCode Estático", priority = 2)
     public void decodePixQrCodeStatic() {
-        String qrCode = "00020126830014br.gov.bcb.pix01364004901d-bd85-4769-8e52-cb4c42c506dc0221Jornada pagador 330955204000053039865406105.905802BR5903Pix6008BRASILIA62290525eb6854c75c9841f7b9b174150630467A5";
+        String qrCode = "00020126830014br.gov.bcb.pix01364004901d-bd85-4769-8e52-cb4c42c506dc0221Jornada pagador 796805204000053039865406390.095802BR5903Pix6008BRASILIA62290525c367867d8ce649eca8b16036c6304B1F9";
 
         Response response = pixPaymentsPayloads.getPixQrCodeDecode(qrCode);
         response.then().statusCode(200);
@@ -79,5 +83,68 @@ public class PixPaymentsRunnerTest {
 
         String responseBody = response.body().asString();
         fileOperations.saveJsonToFile(RESPONSE_PAYMENTS_PIX_KEY, responseBody);
+    }
+
+    @Test(description = "Pagamento de QrCode Estático)", priority = 6)
+    public void paymentPixQrCodeStatic() {
+
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_DECODE_PIX_QRCODE_ESTATICO);
+        String id = jsonPathKeys.getString( "data.id");
+
+        String pin = "1234";
+        String decodePixKeyId = id;
+        Number value = null;
+        String description = "";
+        String paymentDate = null;
+
+        Response response = pixPaymentsPayloads.postPixPaymentsQrCodeStatic(pin, decodePixKeyId, value, description, paymentDate);
+        int expectedStatusCode = 201;
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Falha ao pagar QrCode Estático" + expectedStatusCode);
+
+        String responseBody = response.body().asString();
+        fileOperations.saveJsonToFile(RESPONSE_PAYMENTS_PIX_QRCODE_ESTATICO, responseBody);
+    }
+
+    @Test(description = "Pagamento de QrCode Dinâmico)", priority = 7)
+    public void paymentPixQrCodeDynamic() {
+
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_DECODE_PIX_QRCODE_DINAMICO);
+        String id = jsonPathKeys.getString( "data.id");
+
+        String pin = "1234";
+        String decodePixKeyId = id;
+        Number value = null;
+        String description = "";
+        String paymentDate = null;
+
+        Response response = pixPaymentsPayloads.postPixPaymentQrCodeDynamic(pin, decodePixKeyId, value, description, paymentDate);
+        int expectedStatusCode = 201;
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Falha ao pagar QrCode Dinâmico" + expectedStatusCode);
+
+        String responseBody = response.body().asString();
+        fileOperations.saveJsonToFile(RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO, responseBody);
+    }
+
+    @Test(description = "Pagamento de QrCode Dinâmico Due Date (juros e multa))", priority = 8)
+    public void paymentPixQrCodeDynamicDueDate() {
+
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_DECODE_PIX_QRCODE_DINAMICO_DUE_DATE);
+        String id = jsonPathKeys.getString( "data.id");
+
+        String pin = "1234";
+        String decodePixKeyId = id;
+        Number value = null;
+        String description = "";
+        String paymentDate = null;
+
+        Response response = pixPaymentsPayloads.postPixPaymentQrCodeDynamic(pin, decodePixKeyId, value, description, paymentDate);
+        int expectedStatusCode = 201;
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Falha ao pagar QrCode QrCode Dinâmico Due Date (juros e multa))" + expectedStatusCode);
+
+        String responseBody = response.body().asString();
+        fileOperations.saveJsonToFile(RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO_DUE_DATE, responseBody);
     }
 }
