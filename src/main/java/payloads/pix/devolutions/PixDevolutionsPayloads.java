@@ -107,7 +107,8 @@ public class PixDevolutionsPayloads extends TokenManager {
 
         return response;
     }
-    public Response getWarningPixDevolutionId(String id){
+
+    public Response getWarningPixDevolutionId(String id) {
 
         //Faça a solicitação GET para obter Warning Pix Devolutions by ID
         Response response = given()
