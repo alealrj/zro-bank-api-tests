@@ -13,7 +13,7 @@ public class TokenManager {
     private static final String RECAPTCHA_KEY = "recaptcha-app-key";
     private static final String RECAPTCHA_TOKEN = "action-token";
     private static final String RECAPTCHA_ACTION = "action-name";
-    private static final String USERNAME = "+5511901010101";
+    private static final String USERNAME = "+5511912345678";
     private static final String PASSWORD = "abcd1234";
 
     private static String authToken;
@@ -37,7 +37,6 @@ public class TokenManager {
         Response response = RestAssured.given()
                 .baseUri(baseUri)
                 .headers("nonce", FileOperations.random())
-                .log().all()
                 .body(params)  // Envie os parâmetros como corpo da requisição JSON
                 .when()
                 .post(TOKEN_ENDPOINT);
