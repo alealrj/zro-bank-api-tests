@@ -33,7 +33,6 @@ public class PixDepositsRunnerTest {
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_ID_DUE_DATE = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico_id_due_date.json";
     private static final String RESPONSE_DEL_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix/deposits/delPixdeposits_qr-codes.json";
 
-
     @Test(description = "Gerar QR Code Estático", priority = 1)
     public void postPixDepositsQrCodes() {
 
