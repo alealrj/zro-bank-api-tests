@@ -1,9 +1,9 @@
-package payments.gateway.deposits;
+package gateway;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import payloads.payments.gateway.*;
+import payloads.gateway.*;
 import utils.FileOperations;
 
 import static org.testng.Assert.assertEquals;

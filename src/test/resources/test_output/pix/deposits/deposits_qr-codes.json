@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "data": {
+    "page": 1,
+    "page_size": 20,
+    "page_total": 4,
+    "total": 62,
+    "data": [
+      {
+        "id": "58661047-1b0d-4a28-9380-02222f8652e7",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525x1PAJs3zpGIrYugDkFKOQfBdS63047385",
+        "txid": "x1PAJs3zpGIrYugDkFKOQfBdS",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T14:14:54.702Z"
+      },
+      {
+        "id": "603f0d91-7f44-4030-9941-60163527e153",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525psVt9jeqd1rwXNcUZ4R7FPh0663046853",
+        "txid": "psVt9jeqd1rwXNcUZ4R7FPh06",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T14:19:58.568Z"
+      },
+      {
+        "id": "b681ccbe-da3f-43aa-906f-b9c0b486b394",
+        "key_id": "fceba593-18a2-4171-9c75-9b7157840b7c",
+        "emv": null,
+        "txid": null,
+        "value": 2300,
+        "summary": "party-payment",
+        "description": "User defined description",
+        "state": "ERROR",
+        "created_at": "2023-09-27T17:48:16.659Z"
+      },
+      {
+        "id": "898712e2-e369-4301-86b2-4acef02a064a",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos62290525eWSMhYaD09d81VP5gZNEvTuA36304EC7D",
+        "txid": "eWSMhYaD09d81VP5gZNEvTuA3",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T15:12:37.155Z"
+      },
+      {
+        "id": "e118e22f-5128-46b7-b084-3021a4db41ea",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos622905256uvSLb4ZANnDWl9FXgma0qkcV63041B49",
+        "txid": "6uvSLb4ZANnDWl9FXgma0qkcV",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T14:02:37.985Z"
+      },
+      {
+        "id": "a84d1474-a7fd-4a54-b9c9-73ecc9f11e39",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126880014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe0226The party payment details.520400005303986540523.005802BR5904JCPM6010San Marcos62290525fijGUn4wm2Npg8ZF13ubhxqlC6304C6FD",
+        "txid": "fijGUn4wm2Npg8ZF13ubhxqlC",
+        "value": 2300,
+        "summary": "party-payment",
+        "description": "The party payment details.",
+        "state": "ERROR",
+        "created_at": "2023-05-29T17:45:27.114Z"
+      },
+      {
+        "id": "c070e5a9-c4fc-48fe-9983-bd8e926776fd",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126880014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe0226The party payment details.520400005303986540523.005802BR5904JCPM6010San Marcos62290525ktXpquHJDCsUWjeLci0bBzQoa63042183",
+        "txid": "ktXpquHJDCsUWjeLci0bBzQoa",
+        "value": 2300,
+        "summary": "party-payment",
+        "description": "The party payment details.",
+        "state": "ERROR",
+        "created_at": "2023-05-29T19:02:26.930Z"
+      },
+      {
+        "id": "c8866587-3c70-4a97-ac4e-f9fa67279e41",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos62290525eja9tUPd6vTVbXmuNsRQ2CSHh6304E133",
+        "txid": "eja9tUPd6vTVbXmuNsRQ2CSHh",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T14:22:12.797Z"
+      },
+      {
+        "id": "976b9035-63f7-4f1e-a37d-c59ec12d1c17",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos622905256TNQGFrpSsMlidLaXBgnyjzxe6304FA40",
+        "txid": "6TNQGFrpSsMlidLaXBgnyjzxe",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T15:11:39.897Z"
+      },
+      {
+        "id": "30cc0ded-9221-4d1a-991a-94049653efc0",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525WuIik7DQeCP8KgOw3jdGxv5Ea6304CAF8",
+        "txid": "WuIik7DQeCP8KgOw3jdGxv5Ea",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-06-02T20:00:54.075Z"
+      },
+      {
+        "id": "b000eeba-8643-4d3b-adc2-3511b13013e1",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126920014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe0230The party payment details. opa520400005303986540520.005802BR5904JCPM6010San Marcos62290525VlpB2R7uA1ZizUwOcEYvbnQsM6304248A",
+        "txid": "VlpB2R7uA1ZizUwOcEYvbnQsM",
+        "value": 2000,
+        "summary": "party-payment",
+        "description": "The party payment details. opa",
+        "state": "ERROR",
+        "created_at": "2023-05-29T19:13:35.694Z"
+      },
+      {
+        "id": "1591aedb-9fdc-425c-9dbd-c1fa43aa1294",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos62290525f7PDbeqa0xQZwR1AMGKvS6LNy63041E0B",
+        "txid": "f7PDbeqa0xQZwR1AMGKvS6LNy",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T15:13:34.323Z"
+      },
+      {
+        "id": "25b9cb33-25dc-4a77-b466-dff703a8252a",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525EVpC5XLArJQmK1DPi6bwcBnvq6304FE7B",
+        "txid": "EVpC5XLArJQmK1DPi6bwcBnvq",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T15:14:29.412Z"
+      },
+      {
+        "id": "11a3a9ce-7123-47ed-8939-e5bc9781d563",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126550014BR.GOV.BCB.PIX0114+55819567090760215teste churrasco520400005303986540510.005802BR5904JCPM6010San Marcos62290525vicQFN2aey7t4SudGVm0CjgIl630498AD",
+        "txid": "vicQFN2aey7t4SudGVm0CjgIl",
+        "value": 1000,
+        "summary": "churrasco",
+        "description": "teste churrasco",
+        "state": "ERROR",
+        "created_at": "2023-06-02T20:00:17.507Z"
+      },
+      {
+        "id": "0d1cef82-2648-4a95-92c0-ba37d865c7a1",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos622905253Cotf2zg9BIvRr1yxG0NkleYQ630451D1",
+        "txid": "3Cotf2zg9BIvRr1yxG0NkleYQ",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-31T17:07:59.873Z"
+      },
+      {
+        "id": "ba37e45f-67fd-4898-a1dd-02600c3b9bf6",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos62290525af6cwhlkLHoFiTDMVUduOYszP630423ED",
+        "txid": "af6cwhlkLHoFiTDMVUduOYszP",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-06-22T18:52:48.990Z"
+      },
+      {
+        "id": "bbf49a5d-6eef-4742-820b-7a306a160746",
+        "key_id": "1e832753-a8c8-4cd3-b514-48448c0a2461",
+        "emv": "00020101021126360014BR.GOV.BCB.PIX0114+55819567090765204000053039865802BR5904JCPM6010San Marcos62290525ct4MpTELo9lZKf6jxNrXA0F5P6304EDFB",
+        "txid": "ct4MpTELo9lZKf6jxNrXA0F5P",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-06-22T18:47:43.836Z"
+      },
+      {
+        "id": "5ce026a8-eca1-4fff-92bc-39f3ca040819",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126920014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe0230The party payment details. opa520400005303986540520.005802BR5904JCPM6010San Marcos62290525vEwmbGy1l5SPt0ZMgV7LzaidD6304E14F",
+        "txid": "vEwmbGy1l5SPt0ZMgV7LzaidD",
+        "value": 2000,
+        "summary": "party-payment",
+        "description": "The party payment details. opa",
+        "state": "ERROR",
+        "created_at": "2023-05-29T20:40:53.801Z"
+      },
+      {
+        "id": "735707c3-72b5-4bd9-8f68-b02900fb98cd",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525sKNXCv9Soi0ITYb13w4O528qd63040AB2",
+        "txid": "sKNXCv9Soi0ITYb13w4O528qd",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-05-25T15:18:25.132Z"
+      },
+      {
+        "id": "01397fd8-199c-453b-a1c5-92c2a9554601",
+        "key_id": "edf144fb-33fc-4920-a768-a8a27db4075e",
+        "emv": "00020101021126580014BR.GOV.BCB.PIX0136b0b0f2f8-a00f-498a-b57f-c9302abdb7fe5204000053039865802BR5904JCPM6010San Marcos62290525ScVNvFOfxaTBDMCp4rwubj0W263049B1B",
+        "txid": "ScVNvFOfxaTBDMCp4rwubj0W2",
+        "value": null,
+        "summary": null,
+        "description": null,
+        "state": "ERROR",
+        "created_at": "2023-07-03T19:05:49.930Z"
+      }
+    ]
+  },
+  "error": null
+}

@@ -27,16 +27,17 @@ public class PixDepositsRunnerTest {
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes.json";
     private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_ID = "src/test/resources/test_output/pix/deposits/get_deposits_qr-codes_id.json";
     private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_DYNAMIC_ID = "src/test/resources/test_output/pix/deposits/get_deposits_qr-codes_dynamic_id.json";
-    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/pix/deposits_qr-codes.json";
+    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix/deposits/deposits_qr-codes.json";
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico.json";
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_DUE_DATE = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico_due_date.json";
     private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_ID_DUE_DATE = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico_id_due_date.json";
+    private static final String RESPONSE_DEL_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix/deposits/delPixdeposits_qr-codes.json";
 
 
     @Test(description = "Gerar QR Code Estático", priority = 1)
     public void postPixDepositsQrCodes() {
 
-        String key_id = "4310481a-1171-4a9c-bcd1-0090494f9635";
+        String key_id = "37f1ae8d-792e-4d82-af7b-3f88d2b40ada";
         Number value = 15000;
         String summary = "";
         String description = "";
@@ -78,7 +79,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico", priority = 3)
     public void postPixDepositsQrCodesDynamic() {
 
-        String key = "826ba3c4-b62b-495b-a3aa-127a8f540d47";
+        String key = "a74708e5-3eb9-42cc-a269-4c01ac6f456a";
         Number document_value = 2300;
         String expiration_date = FileOperations.getFormattedExpirationDate();
         String summary = "party-payment";
@@ -114,7 +115,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico Due Date (Juros e Multa)", priority = 5)
     public void postPixDepositsQrCodesDynamicDueDate() {
 
-        String key = "826ba3c4-b62b-495b-a3aa-127a8f540d47";
+        String key = "a74708e5-3eb9-42cc-a269-4c01ac6f456a";
         Number document_value = 2300;
         String due_date = "2023-12-11";
         String expiration_date = "2023-12-11";
@@ -147,7 +148,7 @@ public class PixDepositsRunnerTest {
         String id = jsonPathKeys.getString("data.id");
 
         Response response = pixDepositsPayloads.getPixDepositsQrCodesDynamicId(id);
-//        response.then().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(GET_PIX_DEPOSITS_QRCODES_DYNAMIC));
+        response.then().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(GET_PIX_DEPOSITS_QRCODES_DYNAMIC));
 
         int expectedStatusCode = 200;
         assertEquals(response.getStatusCode(), expectedStatusCode,
@@ -168,5 +169,41 @@ public class PixDepositsRunnerTest {
 
         String responseBody = response.body().asString();
         FileOperations.saveJsonToFile(RESPONSE_GET_PIX_DEPOSITS_QRCODES, responseBody);
+    }
+
+    @Test(description = "Deleter QR Code", priority = 8)
+    public void delPixDepositsQrCodes() {
+
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_GET_PIX_DEPOSITS_QRCODES);
+        String id = jsonPathKeys.getString("data.data.id[6]");
+
+        Response response = pixDepositsPayloads.delPixDepositsQrCodesId(id);
+        int expectedStatusCode = 200;
+        assertEquals(response.getStatusCode(), expectedStatusCode,
+                "Falha ao Excluir QR Code " + expectedStatusCode);
+
+        String responseBody = response.body().asString();
+        FileOperations.saveJsonToFile(RESPONSE_DEL_PIX_DEPOSITS_QRCODES, responseBody);
+    }
+
+    @Test(description = "Deleter Todos os QR Codes Gerados", priority = 9)
+    public void delAllPixDepositsQrCodes() {
+        JsonPath jsonPathKeys = fileOperations.readJsonFileAsJsonPath(RESPONSE_GET_PIX_DEPOSITS_QRCODES);
+
+        // Obtenha o tamanho da lista de IDs
+        int listSize = jsonPathKeys.getList("data.data.id").size();
+
+        // Iterar sobre os IDs
+        for (int i = 0; i < listSize; i++) {
+            String id = jsonPathKeys.getString("data.data.id[" + i + "]");
+
+            Response response = pixDepositsPayloads.delPixDepositsQrCodesId(id);
+            int expectedStatusCode = 200;
+            assertEquals(response.getStatusCode(), expectedStatusCode,
+                    "Falha ao Excluir QR Code " + expectedStatusCode);
+
+            String responseBody = response.body().asString();
+            FileOperations.saveJsonToFile(RESPONSE_DEL_PIX_DEPOSITS_QRCODES, responseBody);
+        }
     }
 }

@@ -42,10 +42,10 @@
                   "type": ["null", "integer", "number"]
                 },
                 "summary": {
-                  "type": "string"
+                  "type": ["null", "integer", "number"]
                 },
                 "description": {
-                  "type": "string"
+                  "type": ["null", "integer", "number"]
                 },
                 "state": {
                   "type": "string"

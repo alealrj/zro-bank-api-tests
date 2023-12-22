@@ -1,4 +1,4 @@
-package payloads.payments.gateway;
+package payloads.gateway;
 
 import io.restassured.response.Response;
 import utils.FileOperations;
@@ -6,17 +6,19 @@ import utils.TokenManager;
 
 import static io.restassured.RestAssured.given;
 
-public class PaymentsGatewayOrdersPayloads extends TokenManager {
+public class PaymentsGatewayDepositsPayloads extends TokenManager {
 
-    private static final String GET_PAYMENTS_GATEWAY_ORDERS = "/payments-gateway/orders";
-    private static final String GET_PAYMENTS_GATEWAY_ORDERS_ID = "/payments-gateway/orders/{id}";
+    private final FileOperations fileOperations = new FileOperations();
 
-    public Response getPaymentsGatewayOrders() {
+    private static final String GET_PAYMENTS_GATEWAY_DEPOSITS = "/payments-gateway/deposits/";
+    private static final String GET_PAYMENTS_GATEWAY_DEPOSITS_ID = "/payments-gateway/deposits/{id}";
+
+    public Response getPaymentesGatewayDeposits() {
 
         Response response = given()
                 .headers("nonce", FileOperations.random())
                 .log().all()
-                .get(GET_PAYMENTS_GATEWAY_ORDERS)
+                .get(GET_PAYMENTS_GATEWAY_DEPOSITS)
                 .then()
                 .log().all()
                 .extract().response();
@@ -24,13 +26,13 @@ public class PaymentsGatewayOrdersPayloads extends TokenManager {
         return response;
     }
 
-    public Response getPaymentesGatewayOrdersId(String id) {
+    public Response getPaymentesGatewayDepositsId(String id) {
 
         Response response = given()
                 .pathParam("id", id)   
                 .headers("nonce", FileOperations.random())
                 .log().all()
-                .get(GET_PAYMENTS_GATEWAY_ORDERS_ID)
+                .get(GET_PAYMENTS_GATEWAY_DEPOSITS_ID)
                 .then()
                 .log().all()
                 .extract().response();

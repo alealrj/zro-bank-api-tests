@@ -115,4 +115,18 @@ public class PixDepositsPayloads extends TokenManager {
 
         return response;
     }
+
+    public Response delPixDepositsQrCodesId(String id) {
+
+        Response response = given()
+                .pathParam("id", id)
+                .headers("nonce", FileOperations.random())
+                .log().all()
+                .delete(DEL_PIX_DEPOSITS_QRCODES_ID)
+                .then()
+                .log().all()
+                .extract().response();
+
+        return response;
+    }
 }
