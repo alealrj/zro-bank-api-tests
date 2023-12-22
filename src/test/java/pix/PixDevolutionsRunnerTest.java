@@ -20,13 +20,13 @@ public class PixDevolutionsRunnerTest {
     final  String GET_PIX_DEVOLUTIONS_RECEIVED_ID = "schemas/pix/devolutions/getPixDevolutionsReceivedId.json";
     final  String GET_WARNING_PIX_DEVOLUTIONS_ID = "schemas/pix/devolutions/getWarningPixDevolutionsId.json";
 
-    private static final String RESPONSE_POST_PIX_DEVOLUTIONS = "src/test/resources/test_output/pix_devolutions/post_devolutions.json";
-    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_ID = "src/test/resources/test_output/pix_devolutions/get_devolutions_id.json";
-    private static final String RESPONSE_GET_PIX_DEVOLUTIONS = "src/test/resources/test_output/pix_devolutions/get_devolutions.json";
-    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_RECEIVED = "src/test/resources/test_output/pix_devolutions/get_devolutions_received.json";
-    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_RECEIVED_ID = "src/test/resources/test_output/pix_devolutions/get_devolutions_received_id.json";
-    private static final String RESPONSE_POST_V2_WARNING_PIX_DEVOLUTIONS_ID = "rc/test/resources/test_output/pix_devolutions/post_v2_warning_pix_devolutions_id.json";
-    private static final String RESPONSE_GET_WARNING_PIX_DEVOLUTIONS_RECEIVED_ID = "src/test/resources/test_output/pix_devolutions/get_warning_devolutions_id.json";
+    private static final String RESPONSE_POST_PIX_DEVOLUTIONS = "src/test/resources/test_output/pix/devolutions/post_devolutions.json";
+    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_ID = "src/test/resources/test_output/pix/devolutions/get_devolutions_id.json";
+    private static final String RESPONSE_GET_PIX_DEVOLUTIONS = "src/test/resources/test_output/pix/devolutions/get_devolutions.json";
+    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_RECEIVED = "src/test/resources/test_output/pix/devolutions/get_devolutions_received.json";
+    private static final String RESPONSE_GET_PIX_DEVOLUTIONS_RECEIVED_ID = "src/test/resources/test_output/pix/devolutions/get_devolutions_received_id.json";
+    private static final String RESPONSE_POST_V2_WARNING_PIX_DEVOLUTIONS_ID = "rc/test/resources/test_output/pix/devolutions/post_v2_warning_pix_devolutions_id.json";
+    private static final String RESPONSE_GET_WARNING_PIX_DEVOLUTIONS_RECEIVED_ID = "src/test/resources/test_output/pix/devolutions/get_warning_devolutions_id.json";
 
 
     @Test(description = "Create Pix devolutions", priority = 1)

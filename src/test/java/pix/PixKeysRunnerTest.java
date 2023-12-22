@@ -14,13 +14,13 @@ public class PixKeysRunnerTest {
 
     final PixKeysPayloads pixKeysPayloads = new PixKeysPayloads();
 
-    private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
-    private static final String RESPONSE_POST_PIX_DISMISS = "src/test/resources/test_output/pix_keys/post_pix_keys_id_dismiss.json";
-    private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix_keys/get_v2_pix_keys.json";
-    private static final String RESPONSE_GET_PIX_KEYS_ID = "src/test/resources/test_output/pix_keys/get_v2_pix_keys_id.json";
+    private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix/keys/post_pix_keys.json";
+    private static final String RESPONSE_POST_PIX_DISMISS = "src/test/resources/test_output/pix/keys/post_pix_keys_id_dismiss.json";
+    private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix/keys/get_v2_pix_keys.json";
+    private static final String RESPONSE_GET_PIX_KEYS_ID = "src/test/resources/test_output/pix/keys/get_v2_pix_keys_id.json";
 
-    private static final String RESPONSE_DELETE_PIX_KEYS = "src/test/resources/test_output/pix_keys/del_pix_keys_id.json";
-    private static final String RESPONSE_DELETE_PIX_KEYS_DISMISS = "src/test/resources/test_output/pix_keys/del_pix_keys_id_dismiss.json";
+    private static final String RESPONSE_DELETE_PIX_KEYS = "src/test/resources/test_output/pix/keys/del_pix_keys_id.json";
+    private static final String RESPONSE_DELETE_PIX_KEYS_DISMISS = "src/test/resources/test_output/pix/keys/del_pix_keys_id_dismiss.json";
 
     @Test(description = "Cadastro de chaves", priority = 1)
     public void postPixKey() {

@@ -24,19 +24,19 @@ public class PixDepositsRunnerTest {
     final String GET_PIX_DEPOSITS_QRCODES_DYNAMIC = "schemas/pix/deposits/getPixDepositsQrCodesDynamicoId.json";
 
     //Salvar o json
-    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes.json";
-    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_ID = "src/test/resources/test_output/pix_deposits/get_deposits_qr-codes_id.json";
-    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_DYNAMIC_ID = "src/test/resources/test_output/pix_deposits/get_deposits_qr-codes_dynamic_id.json";
-    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/get_deposits_qr-codes.json";
-    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes_dynamico.json";
-    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_DUE_DATE = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes_dynamico_due_date.json";
-    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_ID_DUE_DATE = "src/test/resources/test_output/pix_deposits/post_deposits_qr-codes_dynamico_id_due_date.json";
+    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes.json";
+    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_ID = "src/test/resources/test_output/pix/deposits/get_deposits_qr-codes_id.json";
+    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES_DYNAMIC_ID = "src/test/resources/test_output/pix/deposits/get_deposits_qr-codes_dynamic_id.json";
+    private static final String RESPONSE_GET_PIX_DEPOSITS_QRCODES = "src/test/resources/test_output/pix_deposits/pix/deposits_qr-codes.json";
+    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico.json";
+    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_DUE_DATE = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico_due_date.json";
+    private static final String RESPONSE_POST_PIX_DEPOSITS_QRCODES_DYNAMICO_ID_DUE_DATE = "src/test/resources/test_output/pix/deposits/post_deposits_qr-codes_dynamico_id_due_date.json";
 
 
     @Test(description = "Gerar QR Code Estático", priority = 1)
     public void postPixDepositsQrCodes() {
 
-        String key_id = "ef8f3a2f-2541-47eb-9893-f4f2e4f5fc0e";
+        String key_id = "4310481a-1171-4a9c-bcd1-0090494f9635";
         Number value = 15000;
         String summary = "";
         String description = "";
@@ -78,7 +78,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico", priority = 3)
     public void postPixDepositsQrCodesDynamic() {
 
-        String key = "1646c1c6-576c-4e66-aab0-a28f5bba5d91";
+        String key = "826ba3c4-b62b-495b-a3aa-127a8f540d47";
         Number document_value = 2300;
         String expiration_date = FileOperations.getFormattedExpirationDate();
         String summary = "party-payment";
@@ -114,7 +114,7 @@ public class PixDepositsRunnerTest {
     @Test(description = "Gerar QrCode Dinâmico Due Date (Juros e Multa)", priority = 5)
     public void postPixDepositsQrCodesDynamicDueDate() {
 
-        String key = "1646c1c6-576c-4e66-aab0-a28f5bba5d91";
+        String key = "826ba3c4-b62b-495b-a3aa-127a8f540d47";
         Number document_value = 2300;
         String due_date = "2023-12-11";
         String expiration_date = "2023-12-11";

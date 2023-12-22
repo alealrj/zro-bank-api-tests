@@ -13,14 +13,14 @@ public class PixPaymentsRunnerTest {
     private final PixPaymentsPayloads pixPaymentsPayloads = new PixPaymentsPayloads();
     private final FileOperations fileOperations = new FileOperations();
 
-    private static final String RESPONSE_DECODE_PIX_KEY = "src/test/resources/test_output/pix_payments/decode/decodePixKeys.json";
-    private static final String RESPONSE_DECODE_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeStatic.json";
-    private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeDynamic.json";
-    private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix_payments/decode/decodePixQrCodeDynamicDueDate.json";
-    private static final String RESPONSE_PAYMENTS_PIX_KEY = "src/test/resources/test_output/pix_payments/payments/paymentsPixKeys.json";
-    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeEstatico.json";
-    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeDinamico.json";
-    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix_payments/payments/paymentsPixQrCodeDinamicoDueDate.json";
+    private static final String RESPONSE_DECODE_PIX_KEY = "src/test/resources/test_output/pix/payments/decode/decodePixKeys.json";
+    private static final String RESPONSE_DECODE_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix/payments/decode/decodePixQrCodeStatic.json";
+    private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix/payments/decode/decodePixQrCodeDynamic.json";
+    private static final String RESPONSE_DECODE_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix/payments/decode/decodePixQrCodeDynamicDueDate.json";
+    private static final String RESPONSE_PAYMENTS_PIX_KEY = "src/test/resources/test_output/pix/payments/payments/paymentsPixKeys.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_ESTATICO = "src/test/resources/test_output/pix/payments/payments/paymentsPixQrCodeEstatico.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO = "src/test/resources/test_output/pix/payments/payments/paymentsPixQrCodeDinamico.json";
+    private static final String RESPONSE_PAYMENTS_PIX_QRCODE_DINAMICO_DUE_DATE = "src/test/resources/test_output/pix/payments/payments/paymentsPixQrCodeDinamicoDueDate.json";
 
     @Test(description = "Decode de chave Pix", priority = 1)
     public void decodePixKey() {

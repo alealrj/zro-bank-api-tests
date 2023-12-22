@@ -21,8 +21,8 @@ public class PixKeysPayloads extends TokenManager {
     private static final String POST_PIX_KEYS_ID_DISMISS = "/pix/keys/{id}/dismiss";
     private static final String DELETE_PIX_ID = "/pix/keys/{id}";
 
-    private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
-    private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix_keys/get_v2_pix_keys.json";
+    private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix/keys/post_pix_keys.json";
+    private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix/keys/get_v2_pix_keys.json";
 
 
     public Response postPixKeys() {
