@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "amount": {
+          "type": "integer"
+        },
+        "state": {
+          "type": "string"
+        },
+        "operation_id": {
+          "type": "string"
+        },
+        "beneficiary_bank_name": {
+          "type": "string"
+        },
+        "beneficiary_bank_code": {
+          "type": "string"
+        },
+        "beneficiary_name": {
+          "type": "string"
+        },
+        "beneficiary_type": {
+          "type": "string"
+        },
+        "beneficiary_document": {
+          "type": "string"
+        },
+        "beneficiary_agency": {
+          "type": "string"
+        },
+        "beneficiary_account": {
+          "type": "string"
+        },
+        "beneficiary_account_digit": {
+          "type": "string"
+        },
+        "beneficiary_account_type": {
+          "type": "string"
+        },
+        "transaction_id": {
+          "type": "null"
+        },
+        "confirmed_at": {
+          "type": "null"
+        },
+        "failed_at": {
+          "type": "null"
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "amount",
+        "state",
+        "operation_id",
+        "beneficiary_bank_name",
+        "beneficiary_bank_code",
+        "beneficiary_name",
+        "beneficiary_type",
+        "beneficiary_document",
+        "beneficiary_agency",
+        "beneficiary_account",
+        "beneficiary_account_digit",
+        "beneficiary_account_type",
+        "transaction_id",
+        "confirmed_at",
+        "failed_at",
+        "created_at"
+      ]
+    },
+    "error": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "success",
+    "data",
+    "error"
+  ]
+}
