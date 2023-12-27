@@ -88,7 +88,6 @@ public class BankingRunnerTest extends TokenManager {
         String beneficiary_account_digit = "10";
         String beneficiary_account_type= "CC";
 
-
         Response response = bankingPayloads.postBankingTed( pin, amount, beneficiary_bank_name, beneficiary_bank_code, beneficiary_name, beneficiary_type, beneficiary_document, beneficiary_agency, beneficiary_account, beneficiary_account_digit, beneficiary_account_type);
         response.then().statusCode(201);
 

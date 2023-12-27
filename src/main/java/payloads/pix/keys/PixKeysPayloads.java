@@ -24,7 +24,6 @@ public class PixKeysPayloads extends TokenManager {
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix/keys/post_pix_keys.json";
     private static final String RESPONSE_GET_PIX_KEYS = "src/test/resources/test_output/pix/keys/get_v2_pix_keys.json";
 
-
     public Response postPixKeys() {
 
         Response response = given()
@@ -67,7 +66,6 @@ public class PixKeysPayloads extends TokenManager {
 
         return response;
     }
-
 
     public Response getPixKeysId(){
 

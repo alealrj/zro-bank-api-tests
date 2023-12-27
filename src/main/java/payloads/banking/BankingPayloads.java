@@ -112,5 +112,4 @@ public class BankingPayloads {
 
         return response;
     }
-
 }

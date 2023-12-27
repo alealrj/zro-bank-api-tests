@@ -23,9 +23,7 @@ public class PixDepositsPayloads extends TokenManager {
     private static final String GET_PIX_DEPOSITS_QRCODES_ID = "/pix/deposits/qr-codes/{id}";
     private static final String GET_PIX_DEPOSITS_QRCODES = "/pix/deposits/qr-codes";
     private static final String DEL_PIX_DEPOSITS_QRCODES_ID = "/pix/deposits/qr-codes/{id}";
-
     private static final String RESPONSE_POST_PIX_KEYS = "src/test/resources/test_output/pix_keys/post_pix_keys.json";
-
 
     public Response postDepositsQrCodes(String key_id, Number value, String summary, String description) {
 
